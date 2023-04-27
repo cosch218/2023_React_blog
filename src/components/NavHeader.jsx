@@ -19,7 +19,10 @@ import Navbar from 'react-bootstrap/Navbar';
  *  1~5 : 숫자가 클수록 간격이 넓어짐
  *  패딩은 m 대신에 p 사용
  */
-export default function NavHeader() {
+
+// props 값을 받아올 때 NavHeader(props)으로 받아올 수 있다
+// 필요에 따라서 구조 분해를 통해 객체의 값을 바로 받아올 수도 있다
+export default function NavHeader({user}) {
   return (
     <div>
         <Navbar bg='primary' variant='dark'>
@@ -28,7 +31,11 @@ export default function NavHeader() {
                 <Nav className='me-auto'>
                     <Link to='/' className='nav-link'>홈</Link>
                     <Link to='/boardlist' className='nav-link'>게시판</Link>
-                    <Link to='/loginform' className='nav-link'>로그인</Link>
+
+                    {/** 삼항 연산자를 사용하여 user의 값이 있을 때 user.name 출력 */}
+                    {
+                      user ? <Navbar.Text>{user.name}</Navbar.Text> : <Link to='/loginform' className='nav-link'>로그인</Link>
+                    }
                 </Nav>
             </Container>
         </Navbar>
