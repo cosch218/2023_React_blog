@@ -4,6 +4,7 @@ import Slider from "react-slick";
 
 // 폰트 어썸에서 아이콘을 가져오기 위해 import
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // 두가지 종류의 아이콘 이름이 같을 때 as를 사용햇 ㅓ이름을 바꿔 불러올 수 있다
 import { faEnvelope, faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
