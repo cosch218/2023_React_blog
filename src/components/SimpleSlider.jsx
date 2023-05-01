@@ -9,8 +9,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
+
+
 function SampleNextArrow(props) {
+
   const { className, style, onClick } = props;
+
   return (
       <FontAwesomeIcon
         icon={faChevronRight}
